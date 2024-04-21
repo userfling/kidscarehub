@@ -1,0 +1,94 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="shortcut icon" href="{% static 'img/Icon Illust.svg' %}" type="image/svg+xml">
+
+    <title>Connexion - KidsCareHub</title>
+
+    <!-- link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" / -->
+
+    <!-- script src="{% static 'js/inscription.js' %}"></script -->
+
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/connexion.css' %}" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Macondo Swash Caps:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" />
+</head>
+<body class="sign-in">
+
+    <header class="frame-div">
+        <div class="logo-parent">
+            <div class="logo">
+                <img class="illustration-icon" alt="" src="{% static 'img/Illustration.svg' %}" />
+
+                <a href="{% url 'index' %}">
+                    <div class="kidscarehub">KidsCareHub</div>
+                </a>
+            </div>
+            <div class="pas-de-compte-parent">
+                <div class="pas-de-compte">Pas de compte ?</div>
+                <a href="{% url 'inscription' %}" class="senregistrer">S’enregistrer !</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="bienvenue-parent">
+        <div class="bienvenue">Bienvenue</div>
+        <div class="connectez-vous-votre">Connectez-vous à votre compte</div>
+    </div>
+
+    <button class="rectangle-parent" onclick="handleGoogleButtonClick()">
+        <div class="google">Google</div>
+        <img class="google-1-icon" alt="" src="{% static 'icone./google 1.svg' %}" />
+    </button>
+
+    <button class="rectangle-group" onclick="handleFacebookButtonClick()">
+        <img class="facebook-1-icon" alt="" src="{% static 'icone./facebook 1.svg' %}" />
+        <div class="facebook">Facebook</div>
+    </button>
+
+    <div class="ou-continuez-avec">Ou continuez avec</div>
+    <!-- img class="sign-in-child" alt="" src="./public/vector-12.svg" />
+    <img class="sign-in-item" alt="" src="./public/vector-12.svg" / -->
+
+
+    <form action="" method="post">
+
+        <input type="email" class="rectangle-container" name="email"
+            placeholder="Entrez votre adresse e-mail" required>
+
+        <input type="password" class="group-div" id="password" name="password"
+            placeholder="Mot de passe" required >
+
+        <input type="submit" class="button" value="S'inscrire">
+        
+    </form>
+
+    <div class="rcuprer-le-mot">Récupérer le mot de passe</div>
+
+    <div class="sign-in-inner"></div>
+    <img class="rectangle-icon" alt="" src="{% static 'img./img12.png' %}" />
+    <div class="ellipse-div"></div>
+
+    <div class="sign-in-inner1">
+        <div class="rectangle-parent1">
+            <div class="group-child1"></div>
+            <img class="doit-icon" alt="" src="{% static 'icone./doit.svg' %}" />
+
+            <div class="trouvez-votre-nounou">
+                Trouvez votre nounou parfaite dès aujourd’hui !
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

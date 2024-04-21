@@ -1,0 +1,114 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="shortcut icon" href="{% static 'img/Icon Illust.svg' %}" type="image/svg+xml">
+
+    <title>Inscription - KidsCareHub</title>
+
+    <!-- link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" / -->
+
+    <script src="{% static 'js/inscription.js' %}"></script>
+
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/inscription.css' %}" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Macondo Swash Caps:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" />
+</head>
+
+<body class="sign-up">
+
+    <header class="frame-div">
+
+        <div class="logo-parent">
+
+            <div class="logo">
+                <img class="illustration-icon" alt="" src="{% static 'img/Illustration.svg' %}" />
+
+                <a href="{% url 'index' %}">
+                    <div class="kidscarehub">KidsCareHub</div>
+                </a>
+            </div>
+
+            <div class="avez-vous-un-compte-parent">
+                <div class="avez-vous-un-compte">Avez-vous un compte ?</div>
+                <a href="{% url 'connexion' %}" class="connexion">Connexion !</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="sign-up-child"></div>
+    <img class="sign-up-item" alt="" src="{% static 'img./img1.png' %}" />
+    <div class="sign-up-inner"></div>
+
+    <section class="sign-up-details">
+
+        <div class="premiers-pas-avec-kidscarehub-parent">
+            <div class="premiers-pas-avec-container">
+                <span class="premiers-pas-avec">Premiers pas avec KidsCareHub</span>
+            </div>
+            <div class="vos-donnes-sont">
+                Vos données sont protégées par Mi Digital Academy.
+            </div>
+        </div>
+
+        <div class="ou-continuez-avec">Ou continuez avec</div>
+
+        <img class="sign-up-details-child" alt="" src="./public/vector-12.svg" />
+        <img class="sign-up-details-item" alt="" src="./public/vector-12.svg" />
+
+        <button class="rectangle-parent1" onclick="handleGoogleButtonClick()">
+            <div class="google">Google</div>
+            <img class="google-1-icon" alt="" src="{% static 'icone./google 1.svg' %}" />
+        </button>
+
+        <button class="rectangle-parent2" onclick="handleFacebookButtonClick()">
+            <img class="facebook-1-icon" alt="" src="{% static 'icone./facebook 1.svg' %}" />
+            <div class="facebook">Facebook</div>
+        </button>
+
+        <form action="" method="post">
+            <input type="text" class="group-child , rectangle-parent , tite" name="full_name"
+                placeholder="Entrez votre nom complet" required pattern="^[a-zA-Z]+(?: [a-zA-Z]+)+$">
+
+            <input type="email" class="group-child , rectangle-group , tite" name="email"
+                placeholder="Entrez votre adresse e-mail" required>
+
+            <input type="password" class="group-child rectangle-container tite" id="password" name="password"
+                placeholder="Mot de passe" required>
+
+            <input type="password" class="group-child group-div tite" id="confirm_password" name="confirm_password"
+                placeholder="Confirmez le mot de passe" required>
+
+            <input type="submit" class="button" value="S'inscrire">
+        </form>
+
+    </section>
+
+    <section class="sign-up-inner1">
+        <div class="rectangle-parent3">
+            <div class="group-child3"></div>
+            <img class="vector-icon" alt="" />
+
+            <img class="vector-icon1" alt="" src="{% static 'icone./vector.svg' %}" />
+
+            <img class="group-icon" alt="" src="{% static 'icone./group.svg' %}" />
+
+            <div class="trouvez-votre-nounou">
+                Trouvez votre nounou parfaite dès aujourd’hui !
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

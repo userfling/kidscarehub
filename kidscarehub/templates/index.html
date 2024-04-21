@@ -1,0 +1,508 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KidsCareHub</title>
+
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+
+    <link rel="shortcut icon" href="{% static 'img/Icon Illust.svg' %}" type="image/svg+xml">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka One:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open Sans:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Macondo Swash Caps:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600&display=swap" />
+
+
+</head>
+
+<body class="indexhtml">
+
+    <img id="accueil-section" class="mask-background" alt="" src="{% static 'img/Mask group.svg' %}" />
+
+    <header class="header">
+
+        <nav class="nav">
+
+            <div class="logo">
+                <img class="icon-logo" alt="" src="{% static 'img/Illustration.svg' %} ">
+
+                <div class="kidscarehub">KidsCareHub</div>
+            </div>
+
+            <ul class="acceuil-parent">
+                <li class="acceuil"><a href="#accueil-section">Accueil</a></li>
+                <li class="vnements"><a href="#service-section">Service</a></li>
+                <li class="inscription"><a href="#etape-section">Etape</a></li>
+                <li class="acceuil"><a href="#clients-section">Nos clients</a></li>
+
+                <li class="contact"><a href="#contact-section">Contact</a></li>
+            </ul>
+
+        </nav>
+     
+    </header>
+
+    <main>
+
+        <section  class="hero">
+
+            <div class="hero-texte">
+
+                <div class="services-de-nounous-parent">
+
+                    <div class="services-de-nounous">Services De Nounous</div>
+
+                    <div class="kidscarehub-est-une">
+                        KidsCareHub est une application web conçue pour simplifier la
+                        gestion des services de nounous. Elle permet aux parents de
+                        planifier, modifier et annuler les horaires des services de
+                        nounous, de gérer les informations sur leurs enfants, de
+                        communiquer avec les nounous et de suivre les paiements.
+                    </div>
+
+                    <div class="instance-parent">
+                        
+                        <!-- div class="button-wrapper">
+                            <a href="url_de_la_page.html" class="button">CRÉER UN COMPTE</a>
+                        </div>
+                                                
+                        <div class="button-container">
+                            <a href="url_de_la_page.html" class="button">REGARDER LA VIDÉO</a>
+                        </div -->
+
+                        <a href="{% url 'inscription' %}" class="btn btn3">CRÉER UN COMPTE</a>
+                        <button class="btn btn2" type="button">REGARDER LA VIDÉO</button>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+            <img class="illust-icon" alt="" src="{% static 'img/Illust.svg' %}" />
+
+        </section>
+
+        <section id="service-section"class="call-action">
+
+            <div class="maternity-pose-wrapper">
+                <img class="maternity-pose-icon" alt="" src="{% static 'img/Frame 71.svg' %} " />
+            </div>
+
+            <div class="hero-texte">
+
+                <div class="assistance-avant-et-aprs-apr-parent">
+
+                    <div class="assistance-avant-et-container">
+                        <p class="assistance-avant-et">Assistance avant et après</p>
+                        <p class="assistance-avant-et">Après la grossesse</p>
+                    </div>
+
+                    <div class="frame-child"></div>
+                    <b class="soutien-pr-et">Soutien pré et postnatal par des nounous spécialisées</b>
+
+                    <div class="notre-service-de">
+                        Notre service de soutien pré et postnatal par des nounous
+                        spécialisées vous accompagne à chaque étape, offrant une
+                        assistance essentielle dans les tâches ménagères et plus encore.
+                        Nous sommes là pour soulager votre charge de travail et vous
+                        offrir le soutien dont vous avez besoin pendant cette période
+                        spéciale de votre vie.
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <img class="mask-group-icon1" alt="" src="{% static 'img/Mask group 2.svg' %} " />
+
+        <section id="etape-section" class="frame-parent">
+
+            <div class="comment-cela-fonctionne-t-il-parent">
+                <div class="button">Comment cela fonctionne-t-il ?</div>
+                <div class="rectangle-wrapper">
+                    <div class="instance-child"></div>
+                </div>
+                <b class="lorem-ipsum-dolor">Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>
+            </div>
+
+            <div class="frame-group">
+
+                <div class="frame-container">
+                    <div class="ellipse-parent">
+                        <div class="frame-item"></div>
+                        <img class="womans-resume-icon" alt="" src="{% static 'img/1.svg' %}" />
+                    </div>
+                    <div class="crer-un-profil-parent">
+                        <div class="button">Créer un profil</div>
+                        <div class="premire-tape">Première Étape</div>
+                    </div>
+                </div>
+
+                <div class="frame-container">
+                    <div class="ellipse-parent">
+                        <div class="frame-item"></div>
+                        <img class="globe-europe-icon" alt="" src="{% static 'img/2.svg' %}" />
+                    </div>
+                    <div class="crer-un-profil-parent">
+                        <div class="button">Recherche avancée</div>
+                        <div class="premire-tape">Deuxième Étape</div>
+                    </div>
+                </div>
+
+                <div class="frame-container">
+                    <div class="ellipse-parent">
+                        <div class="frame-item"></div>
+                        <!--img class="globe-europe-icon" alt="" src="./public/globe-europe@2x.png" /-->
+
+                        <img class="tasks-in-calendar" alt="" src="{% static 'img/3.svg' %}" />
+                    </div>
+                    <div class="crer-un-profil-parent">
+                        <div class="button">Fixer une date</div>
+                        <div class="premire-tape">Troisième Étape</div>
+                    </div>
+                </div>
+
+                <div class="frame-container">
+                    <div class="ellipse-parent">
+                        <div class="frame-item"></div>
+                        <img class="globe-europe-icon" alt="" src="{% static 'img/4.svg' %}" />
+
+                        <!--img class="tasks-in-calendar" alt="" src="/4.svg" /-->
+                        <!-- img class="icon-with-a-girl" alt="" src="/4.svg"/ -->
+                    </div>
+                    <div class="crer-un-profil-parent">
+                        <div class="button">Se détendre</div>
+                        <div class="premire-tape">Quatrième Étape</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="woman-with-baby-in-supermarket-parent">
+
+            <img class="woman-with-baby-in-supermarket" alt="" src="{% static 'img/woman with baby.svg' %} " />
+
+            <div class="frame-parent3">
+                <div class="assistance-avant-et-aprs-apr-parent">
+                    <div class="assistance-avant-et-aprs-apr-parent">
+                        <div class="button">
+                            <p class="assistance-avant-et">Nous faisons la recherche</p>
+                            <p class="assistance-avant-et">Pour vous</p>
+                        </div>
+                        <div class="rectangle-wrapper">
+                            <div class="instance-child"></div>
+                        </div>
+                        <b class="obtenez-la-nounous">Obtenez la nounous dont vous avez besoin, quand vous en avez
+                            besoin</b>
+                    </div>
+                    <div class="nous-sommes-l">
+                        Nous sommes là pour simplifier votre recherche en vous connectant
+                        aux services et aux professionnels dont vous avez besoin pour
+                        rendre votre vie plus facile.
+                    </div>
+                </div>
+
+                <!-- div class="button-frame">
+                    <b class="button">CRÉER UN COMPTE</b>
+                </div -->
+
+                <!-- button  class="btn btn4" type="button">CONNEXION</button -->
+                <a href="{% url 'connexion' %}" class="btn btn4">CONNEXION</a>
+
+            </div>
+        </section>
+
+        <img class="mask-group-icon2" alt="" src="{% static 'img/Mask group 4.svg' %} " />
+        <img class="mask-group-icon3" alt="" src="{% static 'img/Mask group 3.svg' %}" />
+
+        <section class="group-div">
+
+            <div class="fonctionnalits-parent">
+                <div class="button">Fonctionnalités</div>
+                <div class="rectangle-wrapper">
+                    <div class="instance-child"></div>
+                </div>
+                <b class="obtenez-la-nounous">Profitez de nos avantages exclusifs pour une expérience parentale
+                    simplifiée et enrichissante.</b>
+            </div>
+
+            <div class="frame-parent5">
+                <img class="frame-icon" alt="" src="{% static 'img/A.svg' %}" />
+
+                <b class="button">Aide à l’enfance</b>
+                <div class="soutien-et-accompagnement">
+                    Soutien et accompagnement personnalisé pour une enfance épanouie et
+                    des parents rassurés.
+                </div>
+            </div>
+
+            <div class="frame-parent6">
+                <div class="frame-icon">
+                    <div class="rectangle-div"></div>
+                    <img class="fluent-mdl2join-online-meetin-icon" alt="" src="{% static 'img/B.svg' %}" />
+                </div>
+                <b class="button">Réservation en ligne</b>
+                <div class="soutien-et-accompagnement">
+                    Facilité et rapidité pour planifier vos services de garde en
+                    quelques clics seulement.
+                </div>
+            </div>
+
+            <div class="frame-parent7">
+                <div class="frame-icon">
+                    <div class="rectangle-div"></div>
+                    <img class="iconoircommunity" alt="" src="{% static 'img/C.svg' %}" />
+                </div>
+                <b class="button">Communauté</b>
+                <div class="soutien-et-accompagnement">
+                    Rejoignez une communauté dynamique de parents et de nounous pour
+                    échanger et partager des conseils précieux.
+                </div>
+            </div>
+
+            <div class="frame-parent8">
+                <img class="frame-icon" alt="" src="{% static 'img/D.svg' %}" />
+
+                <b class="button">Tranquillité d’esprit</b>
+                <div class="soutien-et-accompagnement">
+                    Sérénité assurée grâce à une équipe de professionnels dévoués pour
+                    prendre soin de vos enfants en toute confiance.
+                </div>
+            </div>
+
+            <div class="frame-parent9">
+                <div class="frame-icon">
+                    <div class="rectangle-div"></div>
+                    <img class="mdiclock-outline-icon" alt="" src="{% static 'img/E.svg' %}" />
+                </div>
+                <b class="button">Disponibilité 24h/24 et 7j/7</b>
+                <div class="soutien-et-accompagnement">
+                    Profitez d'une assistance disponible à tout moment, même en dehors
+                    des heures de bureau, pour répondre à vos besoins en garde
+                    d'enfants.
+                </div>
+            </div>
+
+            <div class="frame-parent10">
+                <img class="frame-icon" alt="" src="{% static 'img/F.svg' %}" />
+
+                <b class="button">Un service primé</b>
+                <div class="soutien-et-accompagnement">
+                    Reconnu pour son excellence et sa qualité de service, nous sommes
+                    fiers de vous offrir le meilleur pour vos enfants.
+                </div>
+            </div>
+
+        </section>
+
+        <section id="clients-section" class="indexhtml-inner">
+
+            <div class="frame-parent12">
+
+                <div class="nos-clients-parent">
+                    <div class="button">Nos clients</div>
+                    <div class="rectangle-wrapper">
+                        <div class="instance-child"></div>
+                    </div>
+                    <b class="lorem-ipsum-dolor">Soyez inspiré par les expériences authentiques de nos clients
+                        satisfaits</b>
+                </div>
+
+                <div class="frame-parent13">
+
+                    <div class="rectangle-parent2">
+                        <div class="frame-child6"></div>
+                        <div class="ellipse-parent2">
+                            <img class="ellipse-icon" alt="" src="{% static 'img/A1.png' %} " />
+
+                            <div class="tout-simplement-incroyable-k-parent">
+                                <div class="tout-simplement-incroyable">
+                                    Tout simplement incroyable ! KidsCareHub a été un véritable
+                                    atout pour moi et ma famille. Leur équipe de nounous
+                                    spécialisées a pris soin de mes enfants avec amour et
+                                    professionnalisme.
+                                </div>
+                                <div class="natalie-johnson-parent">
+                                    <b class="button">Natalie Johnson</b>
+                                    <div class="button">Maman d’une fille et d’un garçon</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rectangle-parent2">
+                        <div class="frame-child6"></div>
+                        <div class="ellipse-parent2">
+                            <img class="ellipse-icon" alt="" src="{% static 'img/A2.png' %} " />
+
+                            <div class="tout-simplement-incroyable-k-parent">
+                                <div class="tout-simplement-incroyable">
+                                    En tant que parents débordés, KidsCareHub a été notre salut
+                                    pendant ma grossesse. Leur équipe dévouée a pris en charge
+                                    les tâches domestiques et la garde des enfants...
+                                </div>
+                                <div class="natalie-johnson-parent">
+                                    <b class="button">Victro Dacota</b>
+                                    <div class="button">Mom of a girl & boy</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="frame-parent13">
+
+                    <div class="rectangle-parent2">
+
+                        <div class="frame-child6"></div>
+                        <div class="ellipse-parent2">
+                            <img class="ellipse-icon" alt="" src="{% static 'img/A3.png' %} " />
+
+                            <div class="tout-simplement-incroyable-k-parent">
+                                <div class="tout-simplement-incroyable">
+                                    Un immense merci à l'équipe de KidsCareHub ! Leur dévouement
+                                    et leur professionnalisme ont rendu notre transition vers la
+                                    parentalité beaucoup plus douce et sans stress.
+                                </div>
+                                <div class="natalie-johnson-parent">
+                                    <b class="button">Natalie Johnson</b>
+                                    <div class="button">Mom of a girl & boy</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rectangle-parent2">
+                        <div class="frame-child6"></div>
+                        <div class="ellipse-parent2">
+                            <img class="ellipse-icon" alt="" src="{% static 'img/A4.png' %} " />
+
+                            <div class="tout-simplement-incroyable-k-parent">
+                                <div class="tout-simplement-incroyable">
+                                    Je ne pourrais pas me passer de KidsCareHub ! C'est
+                                    tellement pratique pour gérer les services de nounous
+                                </div>
+                                <div class="natalie-johnson-parent">
+                                    <b class="button">Victro Dacota</b>
+                                    <div class="button">Mom of a girl & boy</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="frame-parent13">
+                    <div class="rectangle-parent2">
+                        <div class="frame-child6"></div>
+                        <div class="ellipse-parent2">
+                            <img class="ellipse-icon" alt="" src="{% static 'img/A5.png' %} " />
+
+                            <div class="tout-simplement-incroyable-k-parent">
+                                <div class="tout-simplement-incroyable">
+                                    Grâce à KidsCareHub, je peux facilement organiser la garde
+                                    de mes enfants. C'est un incontournable pour les parents
+                                </div>
+                                <div class="natalie-johnson-parent">
+                                    <b class="button">Natalie Johnson</b>
+                                    <div class="button">Mom of a girl & boy</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rectangle-parent2">
+                        <div class="frame-child6"></div>
+                        <div class="ellipse-parent2">
+                            <img class="ellipse-icon" alt="" src="{% static 'img/A6.png' %} " />
+
+                            <div class="tout-simplement-incroyable-k-parent">
+                                <div class="tout-simplement-incroyable">
+                                    Grâce à KidsCareHub, j'ai pu me reposer et récupérer après
+                                    l'accouchement en sachant que mes enfants étaient entre de
+                                    bonnes mains. Un service vraiment exceptionnel !
+                                </div>
+                                <div class="natalie-johnson-parent">
+                                    <b class="button">Victro Dacota</b>
+                                    <div class="button">Mom of a girl & boy</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact-section" class="version-7-dark">
+
+        <div class="frame-parent11">
+
+            <div class="logo-parent">
+                <div class="logo">
+                    <img class="illustration-icon" alt="" src="{% static 'img/Icon Illust.svg' %} " />
+
+                    <div class="kidscarehub">KidsCareHub</div>
+                </div>
+                <div class="logo-and-text">
+                    <div class="trouvez-votre-nounou">
+                        Trouvez votre nounou parfaite dès aujourd’hui !
+                    </div>
+                    <div class="kidscarehub-2024">KidsCareHub, 2024.</div>
+                </div>
+            </div>
+
+            <div class="container1">
+                <div class="sub-container">
+                    <div class="button3">
+                        <img class="icon" alt="" src="{% static 'icone/Email.svg' %} " />
+
+                        <div class="text-button">kidscarehub@gmail.com</div>
+                    </div>
+                    <div class="button3">
+                        <img class="icon" alt="" src="{% static 'icone/Tel.svg' %} " />
+
+                        <div class="text-button">+225 0554 106 282</div>
+                    </div>
+                    <div class="button3">
+                        <img class="icon" alt="" src="{% static 'icone/Position.svg' %} " />
+
+                        <div class="text-button">Abidjan, Cote d’ivoire</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+
+            <div class="mi-digital-academy">
+                © 2024 <a href="https://www.instagram.com/midigitalacademy/" target="_blank">Mi Digital Academy</a>. Tous droits réservés.
+            </div>
+
+            
+            <div class="links">
+                <div class="mi-digital-academy">Conditions d’utilisation</div>
+                <div class="mi-digital-academy">Politique de confidentialité</div>
+                <div class="mi-digital-academy">Cookies</div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

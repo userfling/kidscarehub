@@ -1,0 +1,885 @@
+* {
+  margin: 0;
+  line-height: normal;
+  box-sizing: border-box; /* Assure que les paddings et bordures ne modifient pas la largeur des éléments */
+}
+
+body {
+  max-width: 100%; /* Limite la largeur maximale du corps à 100% de la fenêtre */
+  overflow-x: hidden; /* Cache la barre de défilement horizontale si le contenu dépasse */
+}
+
+/*---------------------------------------------/
+                   NAVBAR
+/--------------------------------------------*/
+
+.indexhtml {
+  width: 100%;
+  position: relative;
+  background-color: var(--absolute-white);
+  height: 6301px;
+   /* overflow: hidden; */
+  text-align: left;
+  font-size: var(--subtile-1-regular-size);
+  color: var(--color);
+  font-family: var(--subtile-1-regular);
+}
+
+.mask-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1366px;
+  height: 768px;
+}
+
+/*Header*/
+
+.header {
+  position: fixed; /* Fixez la position en "fixed" */
+  top: 0; /* Fixez la navbar en haut de la fenêtre */
+  left: 0;
+  background-color: var(--color-snow);
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-5xs) 78px;
+  font-size: var(--menu-bold-size);
+  width: 1366px; /* Définissez la largeur à 1366 pixels */
+  z-index: 1000; /* Ajoutez une valeur de z-index pour s'assurer que la navbar s'affiche au-dessus des autres éléments */
+}
+
+.header,
+.nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav {
+  flex-direction: row;
+  align-items: center;
+  /* gap: 242px; */
+}
+
+.logo {
+  margin-right: 170px; /* Ajoutez un espacement de 242px à droite du logo */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-10xs);
+  font-size: var(--font-size-10xl-2);
+  font-family: var(--font-macondo-swash-caps);
+}
+
+.icon-logo {
+  width: 66.2px;
+  position: relative;
+  height: 82.5px;
+}
+
+.kidscarehub {
+  position: relative;
+  letter-spacing: 0.01em;
+  line-height: 30.27px;
+}
+
+.acceuil-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Pour aligner les éléments verticalement au centre */
+  justify-content: flex-end; /* Pour aligner les éléments à droite */
+  gap: 40px; /* Espacement entre les éléments */
+  list-style-type: none;
+}
+
+.acceuil-parent li a {
+  color: #494949; /* Définit la couleur initiale */
+  font-family: Poppins, sans-serif;
+  text-decoration: none;
+  font-weight: bold; /* Mettre le texte en gras */
+}
+
+.acceuil-parent li a:hover {
+  color: #FCD980; /* Couleur rose au survol */
+}
+
+.acceuil-parent li a:active {
+  color: #FDE4A6; /* Couleur rose au clic */
+}
+
+
+.contact {
+  margin-left: 200px;
+  width: 126px;
+  border-radius: 12px;
+  background-color: var(--color-lightcoral);
+  height: 48px;
+  display: flex; /* Pour utiliser flexbox */
+  justify-content: center; /* Pour centrer horizontalement */
+  align-items: center; /* Pour centrer verticalement */
+  padding: var(--padding-5xs);
+  box-sizing: border-box;
+}
+
+
+/*Hero*/
+
+.hero {
+  position: absolute;
+  top: calc(50% - 2966.5px);
+  left: calc(50% - 620px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 82px;
+  font-size: var(--h-1-regular-size);
+  color: var(--header);
+}
+
+.services-de-nounous {
+  position: relative;
+  line-height: 120%;
+  font-family: var(--h-2-regular);
+}
+.kidscarehub-est-une {
+  width: 646px;
+  font-size: var(--subtile-1-regular-size);
+  color: var(--color);
+  display: inline-block;
+}
+.button,
+.kidscarehub-est-une {
+  position: relative;
+  line-height: 120%;
+}
+
+/*.button-container,
+.button-wrapper {
+  width: 200px;
+  border-radius: var(--br-31xl);
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: 0.8s;
+}
+.button-wrapper {
+  background-color: var(--color-lightcoral);
+} 
+.button-container {
+  border: 1px solid var(--header);
+  box-sizing: border-box;
+  color: var(--header);
+} */
+
+/*-------*/
+
+.btn{
+  border: 1px solid #3498db;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+.btn1,.btn2{
+  color: #3498db;
+}
+.btn3,.btn4{
+  color: #fff;
+}
+.btn1:hover,.btn2:hover{
+  color: #fff;
+}
+.btn3:hover,.btn4:hover{
+  color: #3498db;
+}
+.btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #3498db;
+  z-index: -1;
+  transition: 0.8s;
+}
+.btn1::before,.btn3::before{
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+.btn2::before,.btn4::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+.btn3::before,.btn4::before{
+  height: 180%;
+}
+.btn1:hover::before,.btn2:hover::before{
+  height: 180%;
+}
+.btn3:hover::before,.btn4:hover::before{
+  height: 0%;
+}
+
+
+/*------*/
+.hero-texte,
+.instance-parent,
+.services-de-nounous-parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.instance-parent {
+  flex-direction: row;
+  gap: var(--gap-xl);
+  font-size: var(--menu-bold-size);
+  color: var(--f3f3f3);
+}
+.hero-texte,
+.services-de-nounous-parent {
+  flex-direction: column;
+}
+.services-de-nounous-parent {
+  gap: var(--gap-11xl);
+}
+.hero-texte {
+  padding: var(--padding-5xs);
+}
+
+/*call-action*/
+
+.maternity-pose-icon {
+  width: 273px;
+  position: relative;
+  height: 456px;
+  object-fit: cover;
+}
+.maternity-pose-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs);
+}
+.assistance-avant-et {
+  margin: 0;
+}
+.assistance-avant-et-container {
+  position: relative;
+  font-size: var(--h-2-regular-size);
+  line-height: 120%;
+  font-family: var(--h-2-regular);
+}
+.frame-child {
+  width: 100px;
+  position: relative;
+  border-radius: 5px;
+  background-color: var(--ffc2);
+  height: 8px;
+}
+.notre-service-de,
+.soutien-pr-et {
+  position: relative;
+  line-height: 120%;
+}
+.soutien-pr-et {
+  color: var(--header);
+}
+.notre-service-de {
+  width: 622px;
+  display: inline-block;
+}
+.assistance-avant-et-aprs-apr-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.call-action {
+  position: absolute;
+  top: 878px;
+  left: calc(50% - 485px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 42px;
+}
+
+/*Etape*/
+
+.instance-child,
+  .mask-group-icon1 {
+    position: absolute;
+    top: 1334px;
+    left: 0;
+    width: 1366px;
+    height: 850px;
+  }
+  .instance-child {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--br-5xs);
+    background-color: var(--ffc2);
+  }
+  .rectangle-wrapper {
+    width: 100px;
+    position: relative;
+    height: 8px;
+  }
+  .lorem-ipsum-dolor {
+    position: relative;
+    font-size: var(--subtile-1-regular-size);
+    line-height: 120%;
+    font-family: var(--subtile-1-regular);
+  }
+  .comment-cela-fonctionne-t-il-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-11xl);
+  }
+  .frame-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: var(--absolute-white);
+    width: 150px;
+    height: 150px;
+  }
+  .womans-resume-icon {
+    position: absolute;
+    top: 19px;
+    left: 36px;
+    width: 78px;
+    height: 111px;
+    object-fit: cover;
+  }
+  .ellipse-parent {
+    width: 150px;
+    position: relative;
+    height: 150px;
+  }
+  .premire-tape {
+    position: relative;
+    font-size: var(--subtile-1-regular-size);
+    line-height: 120%;
+    font-family: var(--subtile-1-regular);
+    text-align: center;
+  }
+  .crer-un-profil-parent,
+  .frame-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-xl);
+  }
+  .frame-container {
+    gap: var(--gap-21xl);
+  }
+  .globe-europe-icon {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 138px;
+    height: 138px;
+    object-fit: cover;
+  }
+  .icon-with-a-girl,
+  .tasks-in-calendar {
+    position: absolute;
+    top: 36px;
+    left: 16px;
+    width: 118px;
+    height: 77px;
+    object-fit: cover;
+  }
+  .icon-with-a-girl {
+    top: 14px;
+    width: 120px;
+    height: 121px;
+  }
+  .frame-group,
+  .frame-parent {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .frame-group {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 95px;
+    font-size: var(--font-size);
+    color: var(--f3f3f3);
+  }
+  .frame-parent {
+    position: absolute;
+    top: 1602px;
+    left: calc(50% - 475px);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-51xl);
+    font-size: var(--h-2-regular-size);
+    color: var(--absolute-white);
+    font-family: var(--h-2-regular);
+  }
+
+/*Call action 2*/
+
+.woman-with-baby-in-supermarket {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 648px;
+  height: 614px;
+  object-fit: cover;
+}
+.obtenez-la-nounous {
+  position: relative;
+  font-size: var(--subtile-1-regular-size);
+  line-height: 120%;
+  color: var(--header);
+}
+.button-frame,
+.nous-sommes-l,
+.obtenez-la-nounous {
+  font-family: var(--subtile-1-regular);
+}
+.nous-sommes-l {
+  width: 563px;
+  position: relative;
+  font-size: var(--subtile-1-regular-size);
+  line-height: 120%;
+  display: inline-block;
+}
+.button-frame {
+  width: 200px;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-lightcoral);
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--menu-bold-size);
+  color: var(--f3f3f3);
+}
+.frame-parent3 {
+  position: absolute;
+  top: 67px;
+  left: 536px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.woman-with-baby-in-supermarket-parent {
+  position: absolute;
+  top: 2294px;
+  left: 105px;
+  width: 1155px;
+  height: 614px;
+  font-size: var(--h-2-regular-size);
+  font-family: var(--h-2-regular);
+}
+
+/*fonctionnalité*/
+
+.mask-group-icon3 {
+  position: absolute;
+  top: 2909px;
+  left: 0;
+  width: 1366px;
+  height: 1288px;
+}
+.fonctionnalits-parent {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 355px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-11xl);
+  font-size: var(--h-2-regular-size);
+  color: var(--color);
+  font-family: var(--h-2-regular);
+}
+.frame-icon {
+  width: 180px;
+  position: relative;
+  height: 180px;
+}
+.soutien-et-accompagnement {
+  width: 308px;
+  position: relative;
+  line-height: 120%;
+  color: var(--text);
+  text-align: center;
+  display: inline-block;
+}
+.frame-parent5 {
+  position: absolute;
+  top: 215px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.rectangle-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--absolute-white);
+  width: 180px;
+  height: 180px;
+}
+.fluent-mdl2join-online-meetin-icon {
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  width: 138px;
+  height: 138px;
+  overflow: hidden;
+}
+.frame-parent6 {
+  position: absolute;
+  top: 215px;
+  left: 352px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.iconoircommunity {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  width: 146px;
+  height: 146px;
+  overflow: hidden;
+}
+.frame-parent7,
+.frame-parent8 {
+  position: absolute;
+  top: 215px;
+  left: 704px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.frame-parent8 {
+  top: 601px;
+  left: 0;
+}
+.mdiclock-outline-icon {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 166px;
+  height: 166px;
+  overflow: hidden;
+}
+.frame-parent10,
+.frame-parent9 {
+  position: absolute;
+  top: 601px;
+  left: 352px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.frame-parent10 {
+  left: 704px;
+}
+.group-div {
+  position: absolute;
+  top: 3104px;
+  left: calc(50% - 506px);
+  width: 1012px;
+  height: 916px;
+  color: var(--header);
+}
+
+/*Nos clients*/
+
+.mask-group-icon2 {
+  position: absolute;
+  top: 4015px;
+  left: -277px;
+  width: 1840px;
+  height: 1992px;
+}
+
+.nos-clients-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-11xl);
+  font-size: var(--h-2-regular-size);
+  color: var(--absolute-white);
+  font-family: var(--h-2-regular);
+}
+.frame-child6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--absolute-white);
+  width: 514px;
+  height: 364px;
+}
+.ellipse-icon {
+  width: 103px;
+  position: relative;
+  border-radius: 50%;
+  height: 103px;
+  object-fit: cover;
+}
+.tout-simplement-incroyable {
+  width: 301px;
+  position: relative;
+  line-height: 120%;
+  font-weight: 500;
+  display: inline-block;
+}
+.ellipse-parent2,
+.natalie-johnson-parent,
+.tout-simplement-incroyable-k-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.natalie-johnson-parent {
+  gap: var(--gap-5xs);
+  font-size: var(--subtile-1-regular-size);
+  font-family: var(--subtile-1-regular);
+}
+.ellipse-parent2,
+.tout-simplement-incroyable-k-parent {
+  gap: var(--gap-21xl);
+}
+.ellipse-parent2 {
+  position: absolute;
+  top: 48px;
+  left: 47px;
+  flex-direction: row;
+  gap: var(--gap-base);
+}
+.rectangle-parent2 {
+  width: 514px;
+  position: relative;
+  height: 364px;
+}
+.frame-parent12,
+.frame-parent13 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-93xl);
+}
+.frame-parent12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-51xl);
+}
+.indexhtml-inner {
+  position: absolute;
+  top: 4310px;
+  left: 101px;
+  width: 1140px;
+  height: 1447px;
+  font-size: var(--font-size);
+  font-family: var(--font);
+}
+
+/*Footer*/
+
+.mi-digital-academy {
+  position: relative;
+}
+.mi-digital-academy a {
+  color: white; /* Couleur du texte par défaut */
+  transition: color 0.3s; /* Transition de couleur */
+}
+
+.mi-digital-academy a:hover {
+  color: rgb(214, 61, 87); /* Couleur du texte au survol */
+}
+.container,
+.links {
+  display: flex;
+  flex-direction: row;
+}
+.links {
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 32px;
+  color: var(--color-snow);
+}
+.container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #2a2a2a;
+  width: 1366px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 80px;
+  box-sizing: border-box;
+}
+.illustration-icon {
+  width: 66.2px;
+  position: relative;
+  height: 82.5px;
+}
+.kidscarehub {
+  position: relative;
+  letter-spacing: 0.01em;
+  line-height: 30.27px;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-10xs);
+}
+.trouvez-votre-nounou {
+  align-self: stretch;
+  position: relative;
+  font-weight: 600;
+}
+.kidscarehub-2024 {
+  position: relative;
+  font-size: var(--subtile-1-regular-size);
+}
+.logo-and-text {
+  width: 380px;
+  font-size: 24px;
+  font-family: var(--font-poppins);
+}
+.logo-and-text,
+.logo-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.icon {
+  width: 24px;
+  position: relative;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.text-button {
+  position: relative;
+  line-height: 150%;
+  font-weight: 500;
+}
+.button3,
+.sub-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.button3 {
+  border-radius: var(--br-7xs);
+  border: 1px solid var(--dark-green-25);
+  align-items: center;
+  padding: var(--padding-sm);
+  gap: var(--gap-7xs);
+}
+.sub-container {
+  align-items: flex-start;
+  gap: var(--gap-xl);
+}
+.container1,
+.frame-parent11 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container1 {
+  width: 800px;
+  border-radius: var(--br-5xs);
+  background-color: var(--dark-green-20);
+  border: 1px solid var(--dark-green-25);
+  box-sizing: border-box;
+  justify-content: center;
+  padding: 16px 20px;
+  font-size: var(--font-size-lg);
+  font-family: var(--font-urbanist);
+}
+.frame-parent11 {
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 618px);
+  justify-content: flex-start;
+  gap: 56px;
+  font-size: var(--font-size-10xl-2);
+  color: var(--absolute-white);
+  font-family: var(--font-macondo-swash-caps);
+}
+.version-7-dark {
+  position: absolute;
+  top: 5904px;
+  left: 0;
+  background-color: #08a8e7;
+  width: 1366px;
+  height: 397px;
+  overflow: hidden;
+  font-size: var(--font-size-sm);
+  color: #f2f5f7;
+  font-family: var(--font-poppins);
+}
+
+/*-----------------------------
+petit parametrage overflow
+-------------------------------*/
+
+.element-absolue {
+  max-width: 100%; /* Limitez la largeur si nécessaire */
+}
+
+.element {
+  margin: 0; /* Assurez-vous que les marges sont contrôlées */
+  padding: 0; /* Assurez-vous que les rembourrages sont contrôlés */
+}
+
+.element-avec-overflow {
+  overflow-x: hidden; /* Cache le débordement horizontal si nécessaire */
+}
